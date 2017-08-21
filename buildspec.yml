@@ -11,23 +11,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm install
-      - npm run build:dev
-      - |
-        if [ "$ENVIRONMENT" = "dev" ]
-        then
-          npm run build:dev
-        fi
-      - |
-        if [ "$ENVIRONMENT" = "stage" ]
-        then
-          npm run build:stage
-        fi
-      - |
-        if [ "$ENVIRONMENT" = "prod" ]
-        then
-          npm run build:prod
-        fi
+      
   post_build:
     commands:
       - echo Build completed on `date`
